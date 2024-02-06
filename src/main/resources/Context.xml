@@ -9,9 +9,9 @@
     <context:component-scan base-package="ru.sbercourses.data"/>
 
     <bean id="student1" class="ru.sbercourses.data.Student">
-        <constructor-arg index="0" value="Petr"/>
-        <constructor-arg index="1" value="Petrov"/>
-        <constructor-arg index="2">
+        <constructor-arg name="name" value="Petr"/>
+        <constructor-arg name="lastName" value="Petrov"/>
+        <constructor-arg name="assessment">
             <map>
                 <entry key="ALGEBRA" value="5"/>
                 <entry key="DRAWING" value="5"/>
@@ -22,9 +22,9 @@
     </bean>
 
     <bean id="student2" class="ru.sbercourses.data.Student">
-        <constructor-arg index="0" value="Kirill"/>
-        <constructor-arg index="1" value="Ivan"/>
-        <constructor-arg index="2">
+        <constructor-arg name="name" value="Kirill"/>
+        <constructor-arg name="lastName" value="Kirillov"/>
+        <constructor-arg name="assessment">
             <map>
                 <entry key="ALGEBRA" value="2"/>
                 <entry key="DRAWING" value="2"/>
@@ -35,9 +35,9 @@
     </bean>
 
     <bean id="student3" class="ru.sbercourses.data.Student">
-        <constructor-arg index="0" value="Jil"/>
-        <constructor-arg index="1" value="Valentine"/>
-        <constructor-arg index="2">
+        <constructor-arg name="name" value="Jil"/>
+        <constructor-arg name="lastName" value="Valentine"/>
+        <constructor-arg name="assessment">
             <map>
                 <entry key="ALGEBRA" value="2"/>
                 <entry key="DRAWING" value="2"/>

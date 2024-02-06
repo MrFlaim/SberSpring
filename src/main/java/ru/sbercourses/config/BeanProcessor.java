@@ -11,10 +11,11 @@ public class BeanProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof Student) {
-            if (((Student) bean).getName().equals("Jil")) {
-                Map<Subject, Integer> subjectIntegerMap = ((Student) bean).getAssessment();
+            Student student = (Student) bean;
+            if (student.getName().equals("Jil")) {
+                Map<Subject, Integer> subjectIntegerMap = student.getAssessment();
                 subjectIntegerMap.entrySet().stream()
-                        .filter(entry -> (entry.getValue() < 3))
+                        .filter(entry -> entry.getValue() < 3)
                         .forEach(entry -> entry.setValue(3));
             }
         }
